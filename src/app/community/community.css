@@ -1,0 +1,80 @@
+.community-page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  color: #1f2937;
+}
+
+.community-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.community-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.community-header p {
+  margin: 1rem auto 0;
+  max-width: 680px;
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.community-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.community-card h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #111827;
+}
+
+.community-card p {
+  margin: 0.75rem 0 0;
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+.join-section {
+  margin-top: 3rem;
+  padding: 1.8rem;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+  border: 1px solid #dbeafe;
+}
+
+.join-section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.8rem;
+}
+
+.join-section p {
+  margin: 0 0 1rem;
+  color: #475569;
+  line-height: 1.75;
+}
+
+.join-section ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #334155;
+  line-height: 1.75;
+}
+
+.join-section li {
+  margin-bottom: 0.65rem;
+}

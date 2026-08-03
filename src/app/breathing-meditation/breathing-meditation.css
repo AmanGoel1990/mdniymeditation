@@ -1,0 +1,78 @@
+.breathing-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #f7f3eb, #f1f7f7);
+  border-radius: 28px;
+}
+
+.breathing-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.breathing-tag {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #e5f0ec;
+  color: #245143;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.breathing-header h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.1;
+  color: #1b3029;
+}
+
+.breathing-header p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #56635e;
+  font-size: 1rem;
+}
+
+.breathing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.breathing-card {
+  padding: 1.3rem;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(17, 48, 42, 0.08);
+}
+
+.breathing-card h3 {
+  margin: 0 0 0.6rem;
+  color: #15342a;
+  font-size: 1.15rem;
+}
+
+.breathing-card p {
+  margin: 0;
+  color: #5a665f;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .breathing-section {
+    padding: 1.25rem;
+    margin: 2rem auto;
+  }
+
+  .breathing-grid {
+    grid-template-columns: 1fr;
+  }
+}

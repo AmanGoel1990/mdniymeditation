@@ -1,0 +1,63 @@
+.resources-section {
+  padding: 2rem 1rem 3rem;
+}
+
+.resources-header {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6b8f6f;
+}
+
+.resources-header h2 {
+  margin: 0 0 0.75rem;
+  color: #153625;
+  font-size: 2rem;
+}
+
+.intro {
+  margin: 0;
+  color: #4f6656;
+  line-height: 1.7;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.resource-card {
+  padding: 1.4rem;
+  border-radius: 18px;
+  background: #fffdf8;
+  box-shadow: 0 12px 30px rgba(21, 54, 37, 0.1);
+}
+
+.resource-card h3 {
+  margin: 0 0 0.6rem;
+  color: #153625;
+  font-size: 1.1rem;
+}
+
+.resource-card p {
+  margin: 0;
+  color: #4f6656;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}

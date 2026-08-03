@@ -1,0 +1,75 @@
+<section class="gallery-page">
+  <div class="gallery-intro">
+    <h1>Gallery</h1>
+    <!-- <p>Select between the featured video and image collection. Video is shown by default.</p> -->
+  </div>
+
+  <div class="gallery-tabs">
+    <button
+      type="button"
+      class="tab-button"
+      [class.active]="activeTab() === 'video'"
+      (click)="setTab('video')"
+    >
+      <span class="tab-icon">🎬</span>
+      <span>Video</span>
+    </button>
+
+    <button
+      type="button"
+      class="tab-button"
+      [class.active]="activeTab() === 'images'"
+      (click)="setTab('images')"
+    >
+      <span class="tab-icon">🖼️</span>
+      <span>Images</span>
+    </button>
+  </div>
+
+  <div class="gallery-content">
+    <article *ngIf="activeTab() === 'video'" class="gallery-card gallery-video">
+      <!-- <h2>Featured Video</h2> -->
+      <video controls poster="/banner.jpg">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+        Your browser does not support HTML video.
+      </video>
+      <!-- <p>Watch the guided breathing sequence and let the imagery support your practice.</p> -->
+    </article>
+
+    <div *ngIf="activeTab() === 'images'" class="gallery-grid">
+      <article
+        class="gallery-card gallery-image-card"
+        *ngFor="let image of galleryImages(); index as i"
+        (click)="showImage(i)"
+      >
+        <!-- <h2>{{ image.caption }}</h2> -->
+        <img [src]="image.src" [alt]="image.alt" />
+      </article>
+    </div>
+  </div>
+
+  <section *ngIf="selectedIndex() !== null" class="image-viewer">
+    <div class="viewer-backdrop" (click)="closeViewer()"></div>
+    <div class="viewer-panel" role="dialog" aria-modal="true">
+      <button type="button" class="viewer-close" (click)="closeViewer()" aria-label="Close viewer">
+        ×
+      </button>
+
+      <div class="viewer-content">
+        <button type="button" class="viewer-nav viewer-nav-prev" (click)="prevImage()" aria-label="Previous image">
+          ‹
+        </button>
+
+        <div class="viewer-image-wrap">
+          <img [src]="galleryImages()[selectedIndex()!].src" [alt]="galleryImages()[selectedIndex()!].alt" />
+          <!-- <p class="viewer-caption">{{ galleryImages()[selectedIndex()!].caption }}</p> -->
+          <p class="viewer-count">{{ selectedIndex()! + 1 }} / {{ galleryImages().length }}</p>
+        </div>
+
+        <button type="button" class="viewer-nav viewer-nav-next" (click)="nextImage()" aria-label="Next image">
+          ›
+        </button>
+      </div>
+    </div>
+  </section>
+</section>
