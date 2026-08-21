@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Footer } from './footer';
-import { RouterLink } from '@angular/router';
 
 describe('Footer', () => {
   let component: Footer;
