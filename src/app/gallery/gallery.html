@@ -28,13 +28,14 @@
 
   <div class="gallery-content">
     <article *ngIf="activeTab() === 'video'" class="gallery-card gallery-video">
-      <!-- <h2>Featured Video</h2> -->
-      <video controls poster="/banner.jpg">
-        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-        Your browser does not support HTML video.
-      </video>
-      <!-- <p>Watch the guided breathing sequence and let the imagery support your practice.</p> -->
-    </article>
+  <iframe
+    src="https://www.youtube.com/embed/jy28nfwpSXI"
+    title="Featured Video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</article>
 
     <div *ngIf="activeTab() === 'images'" class="gallery-grid">
       <article
