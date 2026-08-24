@@ -65,8 +65,9 @@
 }
 
 .gallery-grid {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* width: 50px;  */
   gap: 1.5rem;
 }
 
@@ -77,6 +78,7 @@
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   padding: 1rem;
+  /* height: 100%; */
 }
 
 .gallery-card h2 {
@@ -90,6 +92,7 @@
   display: block;
   border-radius: 0.75rem;
   object-fit: cover;
+  height: 200px;
 }
 
 .gallery-card p {
