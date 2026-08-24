@@ -17,9 +17,9 @@ interface GalleryImage {
 export class Gallery {
   protected readonly activeTab = signal<'video' | 'images'>('video');
   protected readonly galleryImages = signal<GalleryImage[]>([
-    { src: '/banner.jpg', alt: 'Meditation banner', caption: 'Meditation banner' },
-    { src: '/banner_1.jpeg', alt: 'Yoga meditation image', caption: 'Yoga meditation session' },
-    { src: '/banner_2.jpeg', alt: 'Mindfulness practice image', caption: 'Mindfulness practice' },
+    { src: 'banner.jpg', alt: 'Meditation banner', caption: 'Meditation banner' },
+    { src: 'banner_1.jpeg', alt: 'Yoga meditation image', caption: 'Yoga meditation session' },
+    { src: 'banner_2.jpeg', alt: 'Mindfulness practice image', caption: 'Mindfulness practice' },
   ]);
   protected readonly selectedIndex = signal<number | null>(null);
 
